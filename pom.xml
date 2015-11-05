@@ -185,6 +185,7 @@
 				Project</message> <path>http://github.com/anandpadwalkar/mm.git</path> <merge>true</merge> 
 				</configuration> <executions> <execution> <id>github-site</id> <goals> <goal>site</goal> 
 				</goals> <phase>site-deploy</phase> </execution> </executions> </plugin> -->
+
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>sonar-maven-plugin</artifactId>
