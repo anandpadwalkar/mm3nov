@@ -18,7 +18,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.iitms.rfcampusdata.authentication.entity.MenuMasterEntity;
 import com.iitms.rfcampusdomain.authentication.service.MenuService;
-import com.iitms.rfcampusdomain.authentication.service.ModuleService;
 
 @Controller
 public class TestController {
