@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2015-09-14 11:52:18.125 UTC</timestamp>
+  <original>
+    <name>cmsdemo/com.iitms:cms</name>
+    <number>1</number>
+  </original>
+  <md5sum>1403c5b27548be60f5ed2ff4d0ac935b</md5sum>
+  <fileName>com.iitms:cms-1.0.0-BUILD-SNAPSHOT.war</fileName>
+  <usages>
+    <entry>
+      <string>cmsdemo/com.iitms:cms</string>
+      <ranges>1</ranges>
+    </entry>
+    <entry>
+      <string>cmsdemo</string>
+      <ranges>1</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2015-09-15 09:29:40.729 UTC</timestamp>
+  <original>
+    <name>CMS/com.iitms:cms</name>
+    <number>1</number>
+  </original>
+  <md5sum>315ec56f6f9416e2ed0326e729df7d36</md5sum>
+  <fileName>com.iitms:cms:pom.xml</fileName>
+  <usages>
+    <entry>
+      <string>CMS</string>
+      <ranges>1-2</ranges>
+    </entry>
+    <entry>
+      <string>CMS/com.iitms:cms</string>
+      <ranges>1-2</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

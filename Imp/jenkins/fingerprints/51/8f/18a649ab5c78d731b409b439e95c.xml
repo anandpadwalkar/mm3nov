@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2015-09-14 11:27:48.903 UTC</timestamp>
+  <original>
+    <name>CMS/com.iitms:cms</name>
+    <number>7</number>
+  </original>
+  <md5sum>518f18a649ab5c78d731b409b439e95c</md5sum>
+  <fileName>com.iitms:cms:pom.xml</fileName>
+  <usages>
+    <entry>
+      <string>cmsdemo/com.iitms:cms</string>
+      <ranges>1</ranges>
+    </entry>
+    <entry>
+      <string>CMS</string>
+      <ranges>7-8</ranges>
+    </entry>
+    <entry>
+      <string>cmsdemo</string>
+      <ranges>1</ranges>
+    </entry>
+    <entry>
+      <string>ARP/com.iitms:cms</string>
+      <ranges>1</ranges>
+    </entry>
+    <entry>
+      <string>CMS/com.iitms:cms</string>
+      <ranges>7-8</ranges>
+    </entry>
+    <entry>
+      <string>abcd/com.iitms:cms</string>
+      <ranges>1</ranges>
+    </entry>
+    <entry>
+      <string>abcd</string>
+      <ranges>1</ranges>
+    </entry>
+    <entry>
+      <string>ARP</string>
+      <ranges>1</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

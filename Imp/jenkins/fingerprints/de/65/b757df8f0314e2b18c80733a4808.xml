@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2015-09-15 09:31:27.59 UTC</timestamp>
+  <original>
+    <name>CMS/com.iitms:cms</name>
+    <number>2</number>
+  </original>
+  <md5sum>de65b757df8f0314e2b18c80733a4808</md5sum>
+  <fileName>com.iitms:cms-1.0.0-BUILD-SNAPSHOT.war</fileName>
+  <usages>
+    <entry>
+      <string>CMS</string>
+      <ranges>2</ranges>
+    </entry>
+    <entry>
+      <string>CMS/com.iitms:cms</string>
+      <ranges>2</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

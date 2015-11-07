@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2015-09-14 11:27:50.229 UTC</timestamp>
+  <md5sum>1e4942a44b9738d2fec8bb265e84f733</md5sum>
+  <fileName>org.springframework:spring-beans-4.2.1.RELEASE.jar</fileName>
+  <usages>
+    <entry>
+      <string>CMS</string>
+      <ranges>1-2,7-8</ranges>
+    </entry>
+    <entry>
+      <string>cmsdemo/com.iitms:cms</string>
+      <ranges>1</ranges>
+    </entry>
+    <entry>
+      <string>cmsdemo</string>
+      <ranges>1</ranges>
+    </entry>
+    <entry>
+      <string>ARP/com.iitms:cms</string>
+      <ranges>1</ranges>
+    </entry>
+    <entry>
+      <string>abcd/com.iitms:cms</string>
+      <ranges>1</ranges>
+    </entry>
+    <entry>
+      <string>CMS/com.iitms:cms</string>
+      <ranges>1-2,7-8</ranges>
+    </entry>
+    <entry>
+      <string>abcd</string>
+      <ranges>1</ranges>
+    </entry>
+    <entry>
+      <string>ARP</string>
+      <ranges>1</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

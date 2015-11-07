@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2015-09-14 11:27:49.246 UTC</timestamp>
+  <md5sum>fad4e4da2493bd7971dc2356285b1f67</md5sum>
+  <fileName>org.slf4j:jcl-over-slf4j-1.6.6.jar</fileName>
+  <usages>
+    <entry>
+      <string>CMS</string>
+      <ranges>1-2,7-8</ranges>
+    </entry>
+    <entry>
+      <string>cmsdemo/com.iitms:cms</string>
+      <ranges>1</ranges>
+    </entry>
+    <entry>
+      <string>cmsdemo</string>
+      <ranges>1</ranges>
+    </entry>
+    <entry>
+      <string>ARP/com.iitms:cms</string>
+      <ranges>1</ranges>
+    </entry>
+    <entry>
+      <string>abcd/com.iitms:cms</string>
+      <ranges>1</ranges>
+    </entry>
+    <entry>
+      <string>CMS/com.iitms:cms</string>
+      <ranges>1-2,7-8</ranges>
+    </entry>
+    <entry>
+      <string>abcd</string>
+      <ranges>1</ranges>
+    </entry>
+    <entry>
+      <string>ARP</string>
+      <ranges>1</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>
