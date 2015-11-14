@@ -1,7 +1,3 @@
-/*******************************************************************************
- * Copyright (c) 2015 MasterSoft.
- * All rights reserved.
- *******************************************************************************/
 package com.iitms.rfcampusdomain.authentication.serviceimpl;
 
 import java.util.ArrayList;
@@ -22,31 +18,34 @@ import com.iitms.rfcampusdata.authentication.entity.SessionUser;
 import com.iitms.rfcampusdata.authentication.entity.User;
 
 @Component(value = "userDetailsService")
-public class UserDetailsServiceImpl implements UserDetailsService {
+public class UserDetailsServiceImpl implements UserDetailsService{
 
 	private static final Logger logger = LoggerFactory.getLogger(UserDetailsServiceImpl.class);
-
+	
 	@Autowired
 	private UserDetailsDao userDetailsDao;
-
+	
+	
+	
 	@Override
 	@Transactional
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 		logger.info("loadUserByUsername : " + username);
 		User user = userDetailsDao.loadUserByUsername(username);
-		SessionUser sessionUser = new SessionUser();
-		sessionUser.setUsername(user.getUsername());
-		sessionUser.setPassword(user.getPassword());
-		sessionUser.setEnabled(user.isEnabled());
-		List<Roles> roles = new ArrayList<Roles>();
-
-		/*
-		 * for(UserRoles userRoles : user.getUserRoles()){
-		 * roles.add(userRoles.getRole()); } sessionUser.setRoles(roles);
-		 */
-		sessionUser.setRoless(user.getRoles());
-		logger.info("Session : " + sessionUser);
-		return sessionUser;
+	SessionUser sessionUser  = new SessionUser();
+	sessionUser.setUsername(user.getUsername());
+	sessionUser.setPassword(user.getPassword());
+	sessionUser.setEnabled(user.isEnabled());
+	List<Roles> roles = new ArrayList<Roles>();
+	
+	/*for(UserRoles userRoles : user.getUserRoles()){
+		roles.add(userRoles.getRole());
+	}
+	sessionUser.setRoles(roles);
+	*/
+	sessionUser.setRoless(user.getRoles());
+	logger.info("Session : " + sessionUser);
+	return sessionUser;
 	}
 
 }

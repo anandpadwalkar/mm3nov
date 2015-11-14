@@ -1,7 +1,3 @@
-/*******************************************************************************
- * Copyright (c) 2015 MasterSoft.
- * All rights reserved.
- *******************************************************************************/
 package com.iitms.rfcampusdomain.authentication.serviceimpl;
 
 import java.io.IOException;
@@ -14,6 +10,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
+import org.springframework.security.core.AuthenticationException;
+import org.springframework.security.web.authentication.AuthenticationFailureHandler;
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
 import org.springframework.stereotype.Component;
 
@@ -21,7 +19,7 @@ import com.iitms.rfcampusdata.authentication.entity.SessionUser;
 import com.iitms.rfcampusdata.authentication.entity.TestSession;
 
 @Component("authenticationSuccessHandler")
-public class AuthenticationSuccessHandlerImpl implements AuthenticationSuccessHandler{
+public class AuthenticationSuccessHandlerImpl implements AuthenticationSuccessHandler, AuthenticationFailureHandler{
 
 	private static final Logger logger = LoggerFactory.getLogger(AuthenticationSuccessHandlerImpl.class);
 	
@@ -36,9 +34,17 @@ public class AuthenticationSuccessHandlerImpl implements AuthenticationSuccessHa
 		int roleId = sessionUser.getRoless().getId();
 		testSession.setUsername(((SessionUser) auth.getPrincipal()).getUsername());
 	   testSession.setRoleId(roleId);
-		logger.info("user : "+ testSession.getUsername());
-		response.sendRedirect("./hi");
+		
+		response.sendRedirect("./admin");
 		//sessionUser.setUsername();
 	}
+
+    @Override
+    public void onAuthenticationFailure(HttpServletRequest request, HttpServletResponse response,
+        AuthenticationException exception) throws IOException, ServletException {
+        logger.info("Error : " + exception.getMessage());
+        response.sendRedirect("./login");
+        
+    }
 
 }

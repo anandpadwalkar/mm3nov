@@ -1,9 +1,13 @@
-/*******************************************************************************
- * Copyright (c) 2015 MasterSoft.
- * All rights reserved.
- *******************************************************************************/
 package com.iitms.rfcampusdomain.authentication.service;
 
-public interface UniversityAndBoardService {
+import java.util.List;
 
+import com.iitms.rfcampusdata.authentication.entity.UniversityEntity;
+
+public interface UniversityAndBoardService
+{
+	public boolean addUniversity(UniversityEntity entity);
+	
+	public List<UniversityEntity> getAllUniversity();
+	public boolean updateUniversity(UniversityEntity entity);
 }

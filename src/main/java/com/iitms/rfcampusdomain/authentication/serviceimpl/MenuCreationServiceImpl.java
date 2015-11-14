@@ -1,7 +1,3 @@
-/*******************************************************************************
- * Copyright (c) 2015 MasterSoft.
- * All rights reserved.
- *******************************************************************************/
 package com.iitms.rfcampusdomain.authentication.serviceimpl;
 
 import java.util.List;
@@ -16,42 +12,26 @@ import com.iitms.rfcampusdomain.authentication.service.MenuCreationService;
 
 @Service
 @Transactional
-public class MenuCreationServiceImpl implements MenuCreationService{
+public class MenuCreationServiceImpl implements MenuCreationService {
 
-	@Autowired
-	private MenuCreationDao menuCreationDao;
+    @Autowired
+    private MenuCreationDao menuCreationDao;
 
-	@Override
-	public List<MenuMasterEntity> getModulewiseMenu(int moduleId, int searchInTable) {
-		return menuCreationDao.getModulewiseMenu(moduleId, searchInTable);
-	}
+    @Override
+    public List<MenuMasterEntity> getMainMainById(int moduleId, int parentMenuId) {
+        return menuCreationDao.getMainMainById(moduleId, parentMenuId);
+    }
 
-	@Override
-	public boolean addMenu(MenuMasterEntity menuMasterEntity) {
-		return menuCreationDao.addMenu(menuMasterEntity);
-	}
+    @Override
+    public boolean addMainMenuCreation(MenuMasterEntity menuMasterEntity) {
+        return menuCreationDao.addMainMenuCreation(menuMasterEntity);
 
-	@Override
-	public boolean updateMenu(MenuMasterEntity menuMasterEntity) {
-		return menuCreationDao.updateMenu(menuMasterEntity);
-	}
+    }
 
-	@Override
-	public boolean isMenuExist(String menuName, int searchInTable) {
-		return menuCreationDao.isMenuExist(menuName, searchInTable);
-	}
+    @Override
+    public boolean updateMainMenuCreation(MenuMasterEntity menuMasterEntity) {
+        return menuCreationDao.updateMainMenuCreation(menuMasterEntity);
 
-	@Override
-	public MenuMasterEntity getMenuInfo(int menuId) {
-		return menuCreationDao.getMenuInfo(menuId);
-	}
+    }
 
-	@Override
-	public List<MenuMasterEntity> getMainMenu(int moduleId) {
-		return menuCreationDao.getMainMenu(moduleId);
-	}
-
-	
-
-	
 }

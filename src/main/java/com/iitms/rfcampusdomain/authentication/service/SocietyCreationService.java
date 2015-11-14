@@ -1,9 +1,23 @@
-/*******************************************************************************
- * Copyright (c) 2015 MasterSoft.
- * All rights reserved.
- *******************************************************************************/
 package com.iitms.rfcampusdomain.authentication.service;
 
-public interface SocietyCreationService {
+import java.util.List;
 
+import com.iitms.rfcampusdata.authentication.entity.AddressMaster;
+import com.iitms.rfcampusdata.authentication.entity.CollegeModuleMasterEntity;
+import com.iitms.rfcampusdata.authentication.entity.Society;
+import com.iitms.rfcampusdata.authentication.entity.SocietyCreationModel;
+
+public interface SocietyCreationService {
+	public List<Society> getAllSociety();
+	public SocietyCreationModel getSocietyById(int soc_id);
+	List<CollegeModuleMasterEntity> getCollegeModuleyById(int socid);
+	public int addSocietys(SocietyCreationModel entity);
+	public boolean addAddress(AddressMaster address);
+	
+	public boolean updateSociety(SocietyCreationModel entity);
+	public boolean updateAddress(AddressMaster address);
+	
+	
+	public boolean addCollegeModule(CollegeModuleMasterEntity collegeModule);
+	public boolean delete_all_module(int soc_id);
 }
