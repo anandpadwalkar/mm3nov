@@ -1,8 +1,3 @@
-/*******************************************************************************
- * Copyright (c) 2015 MasterSoft.
- * Team Java
- * All rights reserved.
- *******************************************************************************/
 package com.iitms.rfcampusdata.authentication.entity;
 
 import java.io.Serializable;
@@ -16,32 +11,32 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "\"acd_university_master\"")
+@Table(name = "\"ACD_UNIVERSITY_MASTER\"")
 public class UniversityMaster implements Serializable{
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "univsrno", columnDefinition = "serial")
-	private int id;
-	@Column(name = "\"univcode\"")
+	private int id; 
+	@Column(name = "\"UNIVCODE\"")
 	private String universityCode;
-	@Column(name = "\"univname\"")
+	@Column(name = "\"UNIVNAME\"")
 	private String universityName;
-	@Column(name = "\"active\"")
+	@Column(name = "\"ACTIVE\"")
 	private int active;
-	@Column(name = "\"college_id\"")
+	@Column(name = "\"COLLEGE_ID\"")
 	private int collegeId;
-	@Column(name = "\"created_by\"")
+	@Column(name = "\"CREATED_BY\"")
 	private int createdBy;
-	@Column(name = "\"created_dt\"")
+	@Column(name = "\"CREATED_DT\"")
 	private Date createdDate;
-	@Column(name = "\"modified_by\"")
+	@Column(name = "\"MODIFIED_BY\"")
 	private int modifiedBy;
-	@Column(name = "\"modified_dt\"")
+	@Column(name = "\"MODIFIED_DT\"")
 	private Date modifiedDate;
-	@Column(name = "\"ipAddress\"")
+	@Column(name = "\"IPADDRESS\"")
 	private String ipAddress;
-	@Column(name = "\"macAddress\"")
+	@Column(name = "\"MACADDRESS\"")
 	private String macAddress;
 	
 	public int getId() {

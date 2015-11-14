@@ -1,10 +1,23 @@
-/*******************************************************************************
- * Copyright (c) 2015 MasterSoft.
- * Team Java
- * All rights reserved.
- *******************************************************************************/
 package com.iitms.rfcampusdata.authentication.dao;
 
-public interface SocietyCreationDao {
+import java.util.List;
 
+import com.iitms.rfcampusdata.authentication.entity.AddressMaster;
+import com.iitms.rfcampusdata.authentication.entity.CollegeModuleMasterEntity;
+import com.iitms.rfcampusdata.authentication.entity.Society;
+import com.iitms.rfcampusdata.authentication.entity.SocietyCreationModel;
+
+public interface SocietyCreationDao {
+	public List<Society> getAllSociety();
+	public SocietyCreationModel getSocietyById(int soc_id);
+	public List<CollegeModuleMasterEntity> getCollegeModuleyById(int soc_id);
+	public int addSocietys(SocietyCreationModel entity);
+	public boolean addAddress(AddressMaster address);
+	
+	public boolean updateSociety(SocietyCreationModel entity);
+	public boolean updateAddress(AddressMaster address);
+	
+	public boolean addCollegeModule(CollegeModuleMasterEntity collegeModule);
+	
+	public boolean delete_all_module(int soc_id);
 }

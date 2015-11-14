@@ -1,8 +1,3 @@
-/*******************************************************************************
- * Copyright (c) 2015 MasterSoft.
- * Team Java
- * All rights reserved.
- *******************************************************************************/
 package com.iitms.rfcampusdata.authentication.daoimpl;
 
 import java.util.List;
@@ -46,6 +41,7 @@ public class ModuleDaoImpl implements ModuleDao {
 		ModuleMasterEntity entity = (ModuleMasterEntity) session.get(ModuleMasterEntity.class,
 				moduleMasterEntity.getId());
 		entity.setModuleName(moduleMasterEntity.getModuleName());
+		entity.setSerialNumber(moduleMasterEntity.getSerialNumber());
 		entity.setModuleStatus(moduleMasterEntity.getModuleStatus());
 		session.update(entity);
 		return true;
@@ -54,11 +50,11 @@ public class ModuleDaoImpl implements ModuleDao {
 	@Override
 	public boolean isModuleNameExist(int moduleId, String moduleName) {
 		Session session = this.sessionFactory.getCurrentSession();
-		Object o = session.createCriteria(ModuleMasterEntity.class).add(Restrictions.eq("moduleName", moduleName))
+		Long o = (Long) session.createCriteria(ModuleMasterEntity.class).add(Restrictions.eq("moduleName", moduleName))
 				//.add(Restrictions.ne("id", moduleId))
 				.setProjection(Projections.rowCount()).uniqueResult();
 
-		return o != null ? true : false;
+		return o.intValue() != 0 ? true : false;
 	}
 
 	@Override

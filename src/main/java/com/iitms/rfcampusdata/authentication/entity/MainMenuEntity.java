@@ -1,8 +1,3 @@
-/*******************************************************************************
- * Copyright (c) 2015 MasterSoft.
- * Team Java
- * All rights reserved.
- *******************************************************************************/
 package com.iitms.rfcampusdata.authentication.entity;
 
 import java.io.Serializable;
@@ -18,40 +13,40 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "\"ua_main_menu_master\"")
+@Table(name = "\"UA_MAIN_MENU_MASTER\"")
 public class MainMenuEntity implements Serializable {
 
 	@Id
 	@Column(name = "menu_id")
 	private int menuId;
-	@Column(name = "\"menu_name\"")
+	@Column(name = "\"MENU_NAME\"")
 	private String menuName;
-	@Column(name = "\"mod_id\"")
+	@Column(name = "\"MOD_ID\"")
 	private int moduleId;
-	@Column(name = "\"menu_tooltip\"")
+	@Column(name = "\"MENU_TOOLTIP\"")
 	private String menuTooltip;
 	//private String pageName;
-	@Column(name = "\"menu_link\"")
+	@Column(name = "\"MENU_LINK\"")
 	private String menuLink;
-	@Column(name = "\"menu_srno\"")
+	@Column(name = "\"MENU_SRNO\"")
 	private String menuSerialNumber;
-	@Column(name = "\"menu_status\"")
+	@Column(name = "\"MENU_STATUS\"")
 	private int menuStatus;
-	@Column(name = "\"ipAddress\"")
+	@Column(name = "\"IPADDRESS\"")
 	private String ipAddress;
-	@Column(name = "\"macAddress\"")
+	@Column(name = "\"MACADDRESS\"")
 	private String macAddress;
-	@Column(name = "\"created_by\"")
+	@Column(name = "\"CREATED_BY\"")
 	private String createdBy;
-	@Column(name = "\"create_dt\"")
+	@Column(name = "\"CREATE_DT\"")
 	private Date createdDate;
-	@Column(name = "\"modified_by\"")
+	@Column(name = "\"MODIFIED_BY\"")
 	private String modifiedBy;
-	@Column(name = "\"modified_dt\"")
+	@Column(name = "\"MODIFIED_DT\"")
 	private String modifiedDate;
 	
 /*	@OneToMany(fetch = FetchType.EAGER)
-	@JoinColumn(name = "\"p_menu_id\"", referencedColumnName = "menu_id", insertable = false, updatable = false, nullable = false)
+	@JoinColumn(name = "\"P_MENU_ID\"", referencedColumnName = "menu_id", insertable = false, updatable = false, nullable = false)
 	private List<SubMenuEntity> subMenus;*/
 	
 	public int getMenuId() {

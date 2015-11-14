@@ -1,8 +1,3 @@
-/*******************************************************************************
- * Copyright (c) 2015 MasterSoft.
- * Team Java
- * All rights reserved.
- *******************************************************************************/
 package com.iitms.rfcampusdata.authentication.entity;
 
 import java.io.Serializable;
@@ -19,75 +14,73 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "sample")
-public class Sample implements Serializable {
+public class Sample implements Serializable{
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id", columnDefinition = "serial")
-    private int id;
+	@Id@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "id", columnDefinition = "serial")
+	private int id;
+	@Column(name = "p_menu_id")
+	private int pMenuId;
+	@Column(name = "menu_id")
+	private int menuId;
+	@Column(name = "module_id")
+	private int moduleId;
+	
+	@ManyToOne(fetch = FetchType.EAGER)
+	@JoinColumn(name = "p_menu_id", referencedColumnName = "menu_id", insertable = false, updatable = false, nullable = false)
+	private MenuMasterEntity parentMenu;
+	
+	/*@OneToMany( fetch = FetchType.EAGER)
+	@JoinColumn(name = "menu_id", referencedColumnName="menu_id", insertable = true, updatable = true, nullable = false)
+	private List<SubMenuEntity> subMenus ;*/
 
-    @Column(name = "p_menu_id")
-    private int pMenuId;
+	public int getId() {
+		return id;
+	}
 
-    @Column(name = "menu_id")
-    private int menuId;
+	public void setId(int id) {
+		this.id = id;
+	}
 
-    @Column(name = "module_id")
-    private int moduleId;
+	public int getpMenuId() {
+		return pMenuId;
+	}
 
-    @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "p_menu_id", referencedColumnName = "menu_id", insertable = false, updatable = false, nullable = false)
-    private MenuMasterEntity parentMenu;
+	public void setpMenuId(int pMenuId) {
+		this.pMenuId = pMenuId;
+	}
 
-    /*
-     * @OneToMany( fetch = FetchType.EAGER)
-     * @JoinColumn(name = "menu_id", referencedColumnName="menu_id", insertable = true, updatable = true, nullable =
-     * false) private List<SubMenuEntity> subMenus ;
-     */
+	public int getMenuId() {
+		return menuId;
+	}
 
-    public int getId() {
-        return id;
-    }
+	public void setMenuId(int menuId) {
+		this.menuId = menuId;
+	}
 
-    public void setId(int id) {
-        this.id = id;
-    }
+	public int getModuleId() {
+		return moduleId;
+	}
 
-    public int getpMenuId() {
-        return pMenuId;
-    }
+	public void setModuleId(int moduleId) {
+		this.moduleId = moduleId;
+	}
 
-    public void setpMenuId(int pMenuId) {
-        this.pMenuId = pMenuId;
-    }
+	public MenuMasterEntity getParentMenu() {
+		return parentMenu;
+	}
 
-    public int getMenuId() {
-        return menuId;
-    }
+	public void setParentMenu(MenuMasterEntity parentMenu) {
+		this.parentMenu = parentMenu;
+	}
 
-    public void setMenuId(int menuId) {
-        this.menuId = menuId;
-    }
+	/*public List<SubMenuEntity> getSubMenus() {
+		return subMenus;
+	}
 
-    public int getModuleId() {
-        return moduleId;
-    }
-
-    public void setModuleId(int moduleId) {
-        this.moduleId = moduleId;
-    }
-
-    public MenuMasterEntity getParentMenu() {
-        return parentMenu;
-    }
-
-    public void setParentMenu(MenuMasterEntity parentMenu) {
-        this.parentMenu = parentMenu;
-    }
-
-    /*
-     * public List<SubMenuEntity> getSubMenus() { return subMenus; } public void setSubMenus(List<SubMenuEntity>
-     * subMenus) { this.subMenus = subMenus; }
-     */
-
+	public void setSubMenus(List<SubMenuEntity> subMenus) {
+		this.subMenus = subMenus;
+	} */
+	
+	
 }

@@ -1,11 +1,12 @@
-/*******************************************************************************
- * Copyright (c) 2015 MasterSoft.
- * Team Java
- * All rights reserved.
- *******************************************************************************/
-
 package com.iitms.rfcampusdata.authentication.dao;
 
-public interface UniversityAndBoardDao {
+import java.util.List;
 
+import com.iitms.rfcampusdata.authentication.entity.UniversityEntity;
+
+public interface UniversityAndBoardDao 
+{
+     public boolean addUniversityAndBoard(UniversityEntity entity);
+     public List<UniversityEntity> getUniversityList();
+     public boolean updateUniversity(UniversityEntity entity);
 }

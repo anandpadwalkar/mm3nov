@@ -1,8 +1,3 @@
-/*******************************************************************************
- * Copyright (c) 2015 MasterSoft.
- * Team Java
- * All rights reserved.
- *******************************************************************************/
 package com.iitms.rfcampusdata.authentication.entity;
 
 import java.io.Serializable;
@@ -15,13 +10,13 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "\"ua_society_master\"")
+@Table(name = "ua_society_master")
 public class SocietyMaster implements Serializable{
 
 	@Id@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "soc_id", columnDefinition = "serial")
 	private int id;
-	@Column(name = "\"soc_name\"")
+	@Column(name = "soc_name")
 	private String societyName;
 	public int getId() {
 		return id;

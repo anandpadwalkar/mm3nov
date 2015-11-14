@@ -1,23 +1,19 @@
-/*******************************************************************************
- * Copyright (c) 2015 MasterSoft.
- * Team Java
- * All rights reserved.
- *******************************************************************************/
-
 package com.iitms.rfcampusdata.authentication.dao;
 
 import java.util.List;
 
+import com.iitms.rfcampusdata.authentication.entity.CollegeCreationModel;
 import com.iitms.rfcampusdata.authentication.entity.CollegeMasterEntity;
 
-public interface CollegeCreationDao
-{
+public interface CollegeCreationDao {
 
     public List<CollegeMasterEntity> getCollegeList();
 
-    public boolean addCollege(CollegeMasterEntity collegeMasterEntity);
+    public CollegeCreationModel getCollegeInformation(int collegeId);
 
-    public boolean updateCollege(CollegeMasterEntity collegeMasterEntity);
+    public boolean addCollege(CollegeCreationModel collegeCreationModel);
+
+    public boolean updateCollege(CollegeCreationModel collegeCreationModel);
 
     public boolean isCollegeExist(String collegeName);
 }
